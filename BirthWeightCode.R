@@ -13,14 +13,13 @@ summary(brthwght.data)
 glimpse(brthwght.data)
 
 ## Going to look at initial plots individually to see if I can see anything significant.
-require( gridExtra )
-pt1 <- dotplot(ftv ~ bwt , main="Birth Weight Vs First Trimester Visits", data=brthwght.data )
-pt2 <- dotplot(race ~ bwt,  main="Dot Plot of Birth Weight and Race", data= brthwght.data  )
-pt3 <- bwplot( ~ bwt, main="Birth Weight Box Plot", data= brthwght.data  )
-pt4 <- bwplot(~ age, main="Boxplot of Mother's Age", data= brthwght.data  )
-pt5 <- bwplot( ~lwt, main="Boxplot of Mother's Weight", data= brthwght.data  )
-pt6 <- dotplot( ptl ~ bwt,  main="Premature Labors vs Birth Weight", data= brthwght.data  )
-grid.arrange( pt1, pt2, pt3, pt4, pt5, pt6, ncol= 2 , nrow= 3 )
+pt1 <- plot(ftv ~ bwt , main="Birth Weight Vs First Trimester Visits", data=brthwght.data )
+pt2 <- plot(race ~ bwt,  main="Dot Plot of Birth Weight and Race", data= brthwght.data  )
+pt3 <- plot( ~ bwt, main="Birth Weight Box Plot", data= brthwght.data  )
+pt4 <- plot(~ age, main="Boxplot of Mother's Age", data= brthwght.data  )
+pt5 <- plot( ~lwt, main="Boxplot of Mother's Weight", data= brthwght.data  )
+pt6 <- plot( ptl ~ bwt,  main="Premature Labors vs Birth Weight", data= brthwght.data  )
+
 
 ## Checking Correlations to see what is going on in my variables
 brthwt_matrix <- cor(brthwght.data)
