@@ -38,7 +38,7 @@ pairs(brthwght.data)
 library(plyr)    
 library(ggplot2) 
 #Race vs Birthweight
-ggplot(brthwght.data, aes(x=as.factor(race), y=bwt)) + geom_boxplot() + xlab("Race: 1=White, 2=Black, 3=Other")+ ylab("Birth Weight")
+ggplot(brthwght.data, aes(x=as.factor(race), y=bwt)) + geom_boxplot() + xlab("Race: 1=White, 2=African American, 3=Other")+ ylab("Birth Weight")
 
 #Race vs Birthweight
 ggplot(brthwght.data, aes(x=as.factor(smoke), y=bwt)) + geom_boxplot() + xlab("Smoking: 0=No, 1=Yes")+ ylab("Birth Weight")
